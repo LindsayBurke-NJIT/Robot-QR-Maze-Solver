@@ -7,7 +7,6 @@ from locorobo import LocoRobo
 from locorobo import MotorDirection
 from locorobo import WaitType
 from locorobo import Data
-import numpy as np
 
 def get_robot(robots, name):
     robot = None
@@ -112,7 +111,7 @@ def robot():
         #Receive QR code from the camera process
         msg = socket.recv_string()
         msg = msg.lower()
-        print(msg)
+        #print(msg)
         dist = robot.get_sensor_value(Data.ULTRASONIC)
 
         #set direction
